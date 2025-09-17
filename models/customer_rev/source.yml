@@ -1,0 +1,47 @@
+sources:
+  - name: landing
+    description: The primary source system for order management system(OMS) data analytics.
+    database: SLEEKMART_OMS
+    schema: L1_LANDING
+    freshness: 
+      error_after:
+        count: 2
+        period: day
+      warn_after:
+        count: 1
+        period: day
+    loaded_at_field: Updated_at
+    
+
+    tables:
+      - name: customers
+        identifier: customers
+        columns:
+          - name: CustomerId
+            tests:
+              - not_null     # in-built test
+      - name: orders
+        identifier: orders
+        columns:
+          - name: Orderid
+            tests:
+            - string_not_null #generic test application
+            
+      - name: orderitems
+        identifier: orderitems
+
+
+models:
+- name: tempItemPriceINR
+  columns: 
+    - name: UnitPriceINR #just an example check on the new model
+      tests:
+         - string_not_null
+
+        
+
+
+
+
+
+
