@@ -12,3 +12,14 @@ JOIN
 GROUP BY
     OS.CustomerID,
     C.CustomerName
+
+
+
+
+
+
+
+
+
+
+

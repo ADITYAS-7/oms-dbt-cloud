@@ -30,6 +30,18 @@ sources:
       - name: orderitems
         identifier: orderitems
 
+      - name: employees
+        identifier: employees
+
+      
+      - name: products
+        identifier: products
+        columns:
+          - name: ProductId
+            tests:
+              - not_null 
+          
+
 
 models:
 - name: tempItemPriceINR
