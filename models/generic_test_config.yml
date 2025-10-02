@@ -1,0 +1,23 @@
+
+    models:
+      - name: customer_stg
+        columns:
+          - name: Email
+            tests:
+              - string_not_null
+
+      - name: Profit_Not_Null
+        columns: 
+            - name: Profit_PP
+              tests: 
+                - profit_not_zero_neg
+      
+      # FOLLOWING IS A TEST TO COMPARE THE ROWS OF TWO DIFFERENT TABLES/MODELS, NOT USING HERE BECAUSE OF THE DB ISSUE
+      #- name: orderitems_uniq
+       # tests:
+        #    - dbt_expectations.expect_table_row_count_to_equal_other_table:
+         #       compare_model: ref("order_stg")
+
+
+
+    
