@@ -7,6 +7,7 @@
   'products': 100,
   'orderitems': 1000,
   'orders': 200
+  
 } %}
 
 -- Test the count of records in each table

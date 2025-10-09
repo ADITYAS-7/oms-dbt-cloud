@@ -40,6 +40,21 @@ sources:
           - name: ProductId
             tests:
               - not_null 
+
+      
+      - name: stores
+        identifier: stores
+        columns:
+          - name: StoreID
+            tests:
+              - not_null
+
+      
+      - name: payments
+        identifier: payments
+
+      - name: paymentmethods
+        identifier: paymentmethods
           
 
 
